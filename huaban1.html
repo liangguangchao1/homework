@@ -22,35 +22,92 @@
 		<script type="text/javascript">
 			var canvas = document.querySelector("#canvas");
 			var context = canvas.getContext("2d");
-        
-            context.fill()
-            var x = 50;
-         	var y=50;
-         	var d =0;
-           var t =setInterval(function(){
-            context.clearRect(0,0,800,800);
-            if (x<750&&y==50) {
-            	x+=10;
-            	y=50;
-            	console.log(x);
-            	console.log(y);
-            }else if(y<750&x==750){
-            	y+=10;
-            	console.log(x);
-            	console.log(y);
-            }else if(x<=750&&y==750&&x>=60){
-            	x-=10;
-            	
-            }else if(x==50&&y<=750){
-            	y-=10;
-            	x=50;
-            	console.log(x);
-            	console.log(y);
-            }
-         	context.beginPath();
-         	context.arc(x,y,50,0,Math.PI*2,false);
-         	context.fill();
-         },10)
+
+			context.translate(400, 400);
+
+			function drawClock() {
+				var now = new Date();
+				var h = now.getHours();
+				var m = now.getMinutes();
+				var s = now.getSeconds();
+                var Y = now.getFullYear();
+				var M = now.getMonth() + 1;
+				var D = now.getDate();
+				var W = now.getDay();
+				context.clearRect(-400, -400, 800, 800);
+                 context.font = "bold 40px sans-serif";
+				context.textAlign = "center";
+				context.textBaseline = "middle";
+				context.fillStyle = "black";
+				context.fillText(Y + "-" + M + "-" + D + "星期" + W, 0, 160);
+				// 表盘
+				context.beginPath();
+				context.strokeStyle = "black";
+				context.lineWidth = 20;
+				context.arc(0, 0, 370, 0, Math.PI * 2);
+				context.stroke();
+
+				// 刻度
+				context.fillStyle = "black";
+				for(var i = 0; i < 60; i++) {
+					
+					var x = 340 * Math.cos(Math.PI / 180 * 6 * i);
+					var y = 340 * Math.sin(Math.PI / 180 * 6 * i);
+					context.beginPath();
+					if(i % 5 == 0) {
+						var text = ((i / 5 + 3) % 12 == 0) ? 12 : (i / 5 + 3) % 12;
+						context.fillText(text, x, y);
+						context.font = "bolder 50px '微软雅黑'";
+					
+					} else {
+						context.arc(x, y, 4, 0, Math.PI * 2);
+					}
+					context.fill();
+				}
+
+				context.lineCap = "round";
+
+				context.save();
+				// 时针
+				context.beginPath();
+				context.rotate(Math.PI / 180 * (30 * h + m / 2));
+				context.lineWidth = 25;
+				context.lineTo(0, 30);
+				context.lineTo(0, -220);
+				context.stroke();
+
+				context.restore();
+
+				context.save();
+				// 分针
+				context.beginPath();
+				context.rotate(Math.PI / 180 * (6 * m + s / 10));
+				context.lineWidth = 15;
+				context.lineTo(0, 40);
+				context.lineTo(0, -260);
+				context.stroke();
+				context.restore();
+
+				context.save();
+				// 秒针
+				context.beginPath();
+				context.rotate(Math.PI / 180 * 6 * s);
+				context.lineWidth = 5;
+				context.strokeStyle = "red";
+				context.lineTo(0, 70);
+				context.lineTo(0, -300);
+				context.stroke();
+				context.restore();
+
+				context.beginPath();
+				context.arc(0, 0, 25, 0, Math.PI * 2);
+				context.fillStyle = "aqua";
+				context.fill();
+			}
+
+			drawClock();
+
+			setInterval(drawClock, 1000);
 		</script>
 	</body>
 
