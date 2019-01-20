@@ -6,3 +6,7 @@ https://liangguangchao1.github.io/homework/
 https://liangguangchao1.github.io/homework/huaban1.html</br>
 #第5天作业
 https://liangguangchao1.github.io/homework/beijing.html</br>
+https://liangguangchao1.github.io/homework/bing形图.html</br>
+https://liangguangchao1.github.io/homework/柱形图.html</br>
+https://liangguangchao1.github.io/homework/zhexian图.html</br>
+
