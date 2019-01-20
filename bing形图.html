@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+
+	<body>
+		
+		<div id="main" style="width: 600px;height:400px;border: solid 1px red;"></div>
+		<script type="text/javascript" src="js/echarts-en.common.js"></script>
+		<script type="text/javascript">
+			
+			var myChart = echarts.init(document.getElementById('main'));
+
+			
+			var option = {
+				title: {
+					text: '12月销量'
+				},
+				tooltip: {},
+				legend: {
+					data: ['销量']
+				},
+				xAxis: {
+					nameRotate: 30,
+					data: ["一月", "二月", "三月", "四月", "五月", "六月", "七月", "八月", "九月", "十月", "十一月", "十二月"],
+					axisLabel:{
+	    			    rotate:60,
+	    			}
+				},
+				
+
+				dataZoom: [{
+					type: 'slider', 
+					start: 10, 
+					end: 60
+				}],
+				yAxis: {
+					nameRotate: 30
+				},
+				series: [{
+					name: '销量',
+					type: 'bar',
+					data: [5, 20, 36, 10, 10, 20, 5, 20, 36, 10, 10, 100]
+				}]
+			};
+
+		
+
+		
+			myChart.setOption(option);
+		</script>
+	</body>
+
+</html>

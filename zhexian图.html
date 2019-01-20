@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+
+	<body>
+		
+		<div id="main" style="width: 600px;height:400px;border: solid 1px red;"></div>
+		<script type="text/javascript" src="js/echarts-en.common.js"></script>
+		<script type="text/javascript">
+			
+			var myChart = echarts.init(document.getElementById('main'));
+
+		option = {
+    xAxis: {
+        type: 'category',
+        data: ['1', '2', '3', '4', '5', '6', '7','8', '9', '10', '11', '12', '13', '14','15', '16', '17', '18', '19', '20', '21','22', '23', '24', '25', '26', '27','28','29']
+    },
+    yAxis: {
+        type: 'value'
+    },
+    series: [{
+        data: [820, 932, 901, 934, 1290, 1330, 1320,820, 932, 901, 934, 1290, 1330, 1320,820, 932, 901, 934, 1290, 1330, 1320,820, 932, 901, 934, 1290, 1330, 1320],
+        type: 'line'
+    }]
+};
+		
+			myChart.setOption(option);
+		</script>
+	</body>
+
+</html>

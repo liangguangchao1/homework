@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			.nav {
+				margin: 100px 100px 100px 100px;
+				padding: 0;
+				height: 135px;
+				width: 900px;
+				list-style: none;
+				border: solid 1px red;
+				margin: 50px auto;
+				position: relative;
+			}
+			
+			.nav .bg {
+				width: 120px;
+				height: 165px;
+				position: absolute;
+				top: -15px;
+				left: 15px;
+			z-index: -10;
+				border-radius: 10px;
+				background-color: darkturquoise;
+				-webkit-transition: left 0.2s cubic-bezier(0.09, 0.87, 0.76, 1.29);
+			}
+			
+			.nav li {
+				width: 150px;
+				height: 135px;
+				float: left;
+				background-position: center;
+			}
+			
+			.nav li:nth-child(1) {
+				background-image: url(img1/burger-large.png);
+			}
+			
+			.nav li:nth-child(1):hover~.bg {
+				left: 15px;
+			}
+			
+			.nav li:nth-child(2) {
+				background-image: url(img1/comment-large.png);
+			}
+			
+			.nav li:nth-child(2):hover~.bg {
+				left: 165px;
+			}
+			
+			.nav li:nth-child(3) {
+				background-image: url(img1/earth-large.png);
+			}
+			
+			.nav li:nth-child(3):hover~.bg {
+				left: 315px;
+			}
+			
+			.nav li:nth-child(4) {
+				background-image: url(img1/rocket-large.png);
+			}
+			
+			.nav li:nth-child(4):hover~.bg {
+				left: 465px;
+			}
+			
+			.nav li:nth-child(5) {
+				background-image: url(img1/sport-large.png);
+			}
+			
+			.nav li:nth-child(5):hover~.bg {
+				left: 615px;
+			}
+			
+			.nav li:nth-child(6) {
+				background-image: url(img1/wine-large.png);
+			}
+			
+			.nav li:nth-child(6):hover~.bg {
+				left: 765px;
+			}
+		</style>
+	</head>
+
+	<body>
+
+		<ul class="nav">
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<div class="bg"></div>
+		</ul>
+
+	</body>
+
+</html>
