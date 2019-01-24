@@ -11,4 +11,7 @@ https://liangguangchao1.github.io/homework/柱形图.html</br>
 https://liangguangchao1.github.io/homework/zhexian图.html</br>
 #第6天作业
 https://liangguangchao1.github.io/homework/run.html</br>
+#第6天作业</br>
+https://liangguangchao1.github.io/homework/jd.html</br></br>
+https://liangguangchao1.github.io/homework/denglu.html</br></br>
 
