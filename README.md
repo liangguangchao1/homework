@@ -14,4 +14,6 @@ https://liangguangchao1.github.io/homework/run.html</br>
 #第6天作业</br>
 https://liangguangchao1.github.io/homework/jd.html</br></br>
 https://liangguangchao1.github.io/homework/denglu.html</br></br>
+#第8天作业</br>
+https://liangguangchao1.github.io/homework/ql.html</br></br>
 
