@@ -1,0 +1,26 @@
+/* miniprogram/pages/index/index.wxss */
+
+.container {
+  height: 200px;
+}
+
+.container >view {
+  height: 100px;
+  width: 100px;
+}
+
+.blue {
+  background-color: blue;
+}
+
+.red {
+  background-color: red;
+}
+
+.left {
+  float: left;
+}
+
+.right {
+  float: right;
+}

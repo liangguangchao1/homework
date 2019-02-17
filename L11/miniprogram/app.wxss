@@ -1,0 +1,38 @@
+/**全局样式**/
+@import 'style/weui.wxss';
+
+page {
+  font-size: 14px;
+  background-color: #fff;
+}
+
+image {
+  border: 0 none;
+  vertical-align: top;
+}
+
+.left {
+  float: left;
+}
+
+.right {
+  float: right;
+}
+
+.clear::after {
+  display: block;
+  content: "";
+  clear: both;
+}
+
+.flex {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+}
+
+.flex-item {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  flex: 1;
+}

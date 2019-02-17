@@ -1,0 +1,16 @@
+<!--miniprogram/pages/index/index.wxml-->
+
+
+<view class='container'>
+  <view class='left blue'></view>
+  <view class='right red'></view>
+</view>
+
+<!-- view 等效于 div -->
+<view style='height:200px;width:200px;background:red;'></view>
+<!-- text 等效于span  -->
+<text></text>
+<!-- 等效于img -->
+<image src='/images/wechat.png'></image>
+<!-- 等效于a标签  -->
+<navigator url='/pages/user/index'>个人中心</navigator>

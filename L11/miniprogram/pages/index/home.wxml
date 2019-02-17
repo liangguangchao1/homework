@@ -1,0 +1,84 @@
+<!-- 搜索条 -->
+<view class="search-bar flex {{isFixed?'fixed':''}} ">
+  <view class='category'>
+    <text class='icon-category'></text>
+  </view>
+  <view class='input flex-item'>
+    <text class='icon-jd'></text>
+    <input placeholder="请输入搜索内容" />
+  </view>
+  <view class='login'>
+    <navigator url='#'>登录</navigator>
+  </view>
+</view>
+
+<!-- 轮播图 -->
+<swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" indicator-color="#fff" indicator-active-color="#ff0000">
+  <block wx:for="{{imgUrls}}" wx:key="{{index}}">
+    <swiper-item>
+      <image src="{{item}}" mode="widthFix" class="slide-image" />
+    </swiper-item>
+  </block>
+</swiper>
+
+<!-- 快速导航 -->
+<view class='quick-nav'>
+  <navigator class='quick-nav-item' url="{{item.url}}" wx:for="{{quickNav}}" wx:key="{{index}}" >
+    <image src='{{item.image}}' mode="widthFix"></image>
+    <text>{{index+1}}{{item.title}}</text>
+  </navigator>
+</view>
+<view class='demo1 clear'>
+<navigator  class='list left'>
+
+<image class='demo' mode="widthFix" src='/images/01.jpg'></image>
+<text class='demo2'><text class='demo3'>京东超市</text>德世朗天然鸡翅木筷子套装10双装大家好啊大家好大家好
+</text>
+<view class='demo4 clear'>
+<text class='left demo5'>¥220</text>
+<text class='right demo6'>看相似</text>
+</view>
+</navigator>
+<navigator  class='list left'>
+
+<image class='demo' mode="widthFix" src='/images/01.jpg'></image>
+<text class='demo2'><text class='demo3'>京东超市</text>德世朗天然鸡翅木筷子套装10双装
+</text>
+<view class='demo4 clear'>
+<text class='left demo5'>¥220</text>
+<text class='right demo6'>看相似</text>
+</view>
+</navigator>
+<navigator  class='list left'>
+
+<image class='demo' mode="widthFix" src='/images/01.jpg'></image>
+<text class='demo2'><text class='demo3'>京东超市</text>德世朗天然鸡翅木筷子套装10双装
+</text>
+<view class='demo4 clear'>
+<text class='left demo5'>¥220</text>
+<text class='right demo6'>看相似</text>
+</view>
+</navigator>
+<navigator  class='list left'>
+
+<image class='demo' mode="widthFix" src='/images/01.jpg'></image>
+<text class='demo2'><text class='demo3'>京东超市</text>德世朗天然鸡翅木筷子套装10双装
+</text>
+<view class='demo4 clear'>
+<text class='left demo5'>¥220</text>
+<text class='right demo6'>看相似</text>
+</view>
+</navigator>
+</view>
+<!-- 利用for循环  99乘法表 -->
+<view class='con'>
+  <view wx:for="{{[1,2,3,4,5,6,7,8,9]}}" wx:for-item="i">
+    <view style='display:inline-block;width:35px' wx:for="{{[1,2,3,4,5,6,7,8,9]}}" wx:for-item="j">
+      <view wx:if="{{j<=i}}">
+        {{i}}*{{j}}={{i*j}}
+      </view>
+    </view>
+  </view>
+</view>
+
+<view style="height:1000px;"></view>
